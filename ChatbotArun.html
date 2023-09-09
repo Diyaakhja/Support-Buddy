@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun - Mental Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chat-messages {
+            padding: 20px;
+            overflow-y: scroll;
+            max-height: 300px;
+        }
+
+        .user-message {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .bot-message {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .user-message p, .bot-message p {
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .input-container {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 5px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Arun - Mental Support Chatbot</h2>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatMessages = document.getElementById('chat-messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.innerHTML = '<p>' + userInput + '</p>';
+            chatMessages.appendChild(userMessage);
+            
+            // Simulated bot response (you can replace this with more advanced logic)
+            const botResponse = document.createElement('div');
+            botResponse.className = 'bot-message';
+            botResponse.innerHTML = '<p>Thank you for reaching out. We are here to listen.</p>';
+            chatMessages.appendChild(botResponse);
+            
+            document.getElementById('user-input').value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>
+
