@@ -68,26 +68,30 @@
             display: block;
             margin: 0 auto 10px;
         }
-.black-section {
-            background-color: black;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-    position: fixed; 
-    display: none; /* Hide the black section by default */
-            z-index: 999; /* Set a high z-index to ensure it's on top */
-        }
 
-        .black-section p {
-            font-size: 20px;
-        }
     ul.navbar li img {
             width: 20px; /* Adjust the width as needed */
             vertical-align: middle;
             margin-right: 20px; /* Adjust spacing between image and text */
+        }
+         footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
         
     </style>
@@ -120,20 +124,15 @@
         </a>
         </div>
     </div>
-    <div class="black-section">
-        <p>Email Id:abcd@gmail.com
-        Contact no: +91 XXXXXXXXXX
-        Powered by Botpress</p>
-    </div>
-     <script>
-      window.addEventListener('scroll', function() {
-    var blackSection = document.getElementById('blackSection');
-    if (window.scrollY > 0) {
-        blackSection.style.display = 'block';
-    } else {
-        blackSection.style.display = 'none';
-    }
-});
-    </script>
+    <footer>
+        <div>
+            <a href="#">Get to Know Us</a>
+            <a href="#">Connect with Us</a>
+            <a href="#">Let Us Help You</a>
+        </div>
+        <div>
+            &copy; 2023 Your Website Name
+        </div>
+    </footer>
 </body>
 </html>
