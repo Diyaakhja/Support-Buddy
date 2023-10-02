@@ -88,12 +88,32 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;}
+         .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Adjust spacing between image and text */
+        }
+
+        .title-container img {
+            height: 60px; /* Adjust the height to match the text */
+            margin-right: 10px; /* Adjust spacing between image and text */
+        }
+
+        .title-container h1 {
+            font-family: 'Cinzel Decorative', sans-serif;
+            color: rgb(0, 0, 0);
+            font-size: 60px;
+            margin: 0; /* Remove any margin */
+        }
     </style>
 </head>
 
 <body>
+    <div class="title-container">
     <img src="Support Buddy logo.png" >
     <h1>Welcome to Support Buddy</h1>
+    </div>
     <p>Please sign up below to interact with us:</p>
     <div class="container">
         <form action="/signup" method="post" id="signupForm">
