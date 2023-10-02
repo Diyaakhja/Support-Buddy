@@ -76,6 +76,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+    position: fixed; 
     display: none; /* Hide the black section by default */
             z-index: 999; /* Set a high z-index to ensure it's on top */
         }
@@ -125,18 +126,14 @@
         Powered by Botpress</p>
     </div>
      <script>
-        // Show the black section when scrolling down
-        window.addEventListener('scroll', function() {
-            var blackSection = document.getElementById('blackSection');
-            if (window.scrollY > 0) {
-                blackSection.style.display = 'block';
-            } else {
-                blackSection.style.display = 'none';
-            }
-        });
+      window.addEventListener('scroll', function() {
+    var blackSection = document.getElementById('blackSection');
+    if (window.scrollY > 0) {
+        blackSection.style.display = 'block';
+    } else {
+        blackSection.style.display = 'none';
+    }
+});
     </script>
-    
-        
-    
 </body>
 </html>
